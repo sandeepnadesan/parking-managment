@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+let a  =10;
 // User Schema
 const userSchema = new Schema({
   name: { type: String, required: true },
@@ -55,3 +56,4 @@ module.exports = {
   Vehicle,
   Payment
 };
+
