@@ -13,7 +13,7 @@ const userSchema = new Schema({
 }, { timestamps: true });
 
 // Parking Slot Schema
-const parkingSlotSchema = new Schema({
+const parkingSlot = new Schema({
   slotNumber: { type: String, required: true, unique: true },
   level: String,
   isOccupied: { type: Boolean, default: false },
