@@ -40,14 +40,6 @@ const vehicleSchema = new Schema({
   color: String,
 }, { timestamps: true });
 
-// Payment Schema
-const paymentSchema = new Schema({
-  bookingId: { type: Schema.Types.ObjectId, ref: 'Booking', required: true },
-  amount: { type: Number, required: true },
-  paymentMethod: { type: String, enum: ['credit_card', 'cash', 'wallet', 'upi'], required: true },
-  status: { type: String, enum: ['success', 'failed', 'pending'], default: 'pending' },
-  paidAt: Date,
-}, { timestamps: true });
 
 // Model exports
 const User = mongoose.model('User', userSchema);
