@@ -13,7 +13,7 @@ const userSchema = new Schema({
 }, { timestamps: true });
 
 // Parking Slot Schema
-const parkingSlotSchema = new Schema({
+const parkingSlotsSchema = new Schema({
   slotNumber: { type: String, required: true, unique: true },
   level: String,
   isOccupied: { type: Boolean, default: false },
@@ -44,7 +44,7 @@ const vehicleSchema = new Schema({
 
 // Model exports
 const User = mongoose.model('User', userSchema);
-const ParkingSlot = mongoose.model('ParkingSlot', parkingSlotSchema);
+const ParkingSlots = mongoose.model('ParkingSlot', parkingSlotsSchema);
 const Booking = mongoose.model('Booking', bookingSchema);
 const Vehicle = mongoose.model('Vehicle', vehicleSchema);
 const Payment = mongoose.model('Payment', paymentSchema);
