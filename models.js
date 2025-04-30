@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+let a  =10;
 // User Schema
 const userSchema = new Schema({
   name: { type: String, required: true },
@@ -12,7 +13,9 @@ const userSchema = new Schema({
 }, { timestamps: true });
 
 // Parking Slot Schema
+
 const parkingSlotsSchema = new Schema({
+
   slotNumber: { type: String, required: true, unique: true },
   level: String,
   isOccupied: { type: Boolean, default: false },
@@ -55,3 +58,4 @@ module.exports = {
   Vehicle,
   Payment
 };
+
